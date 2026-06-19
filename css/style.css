@@ -979,7 +979,6 @@ html{
     }
 
 
-
 .hero-buttons{
     display: flex;
     justify-content: center;
@@ -1076,4 +1075,63 @@ html{
 .hero-buttons .btn{
     width:85%;
     max-width:280px;
+}
+
+.skills-container,
+.projects-container,
+.contact-container,
+.education-container,
+.about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-card,
+.project-card,
+.contact-card,
+.education-card{
+    width: 90%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title,
+.skills h2,
+.projects h2,
+.contact h2,
+.education h2,
+.about h2{
+    text-align: center;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+}
+
+.menu-toggle{
+    display:block !important;
+    font-size:32px;
+    color:#ff9d2f;
+    cursor:pointer;
+    position:absolute;
+    right:25px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:9999;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo span{
+    font-size:1.8rem;
 }
