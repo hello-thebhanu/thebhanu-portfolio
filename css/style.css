@@ -1107,3 +1107,17 @@ html{
     text-align: center;
 }
 
+.menu-toggle{
+    display:block !important;
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:32px;
+    color:#ff9d2f;
+    z-index:9999;
+}
+
+.navbar{
+    position:relative;
+}
