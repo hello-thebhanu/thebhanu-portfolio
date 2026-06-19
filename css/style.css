@@ -1107,31 +1107,3 @@ html{
     text-align: center;
 }
 
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:relative;
-}
-
-.menu-toggle{
-    display:block !important;
-    font-size:32px;
-    color:#ff9d2f;
-    cursor:pointer;
-    position:absolute;
-    right:25px;
-    top:50%;
-    transform:translateY(-50%);
-    z-index:9999;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.logo span{
-    font-size:1.8rem;
-}
