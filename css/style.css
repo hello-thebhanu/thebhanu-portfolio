@@ -901,6 +901,39 @@ html{
         line-height: 1.1;
     }
 
+
+
+.hero{
+    padding-top:140px;
+}
+
+.hero-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-text{
+    width:100%;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
+
+.hero-buttons a{
+    min-width:150px;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:420px;
+}
+
     /* Buttons */
    
 
@@ -937,8 +970,24 @@ html{
 
 .nav-links.active{
     display:flex;
-}
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
 
+    position:absolute;
+    top:90px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:90%;
+    padding:25px;
+
+    background:rgba(20,20,20,0.95);
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+    z-index:999;
+}
 
     /* Education Section */
     .education-section{
@@ -983,4 +1032,61 @@ html{
 .hero-buttons button{
     width: 180px;
 }
+@media (max-width: 768px) {
 
+.hero-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:30px;
+}
+
+.hero-text{
+    width:100%;
+    text-align:center;
+}
+
+.hero-image{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:90%;
+    max-width:420px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.hero-buttons a{
+    width:auto;
+}
+
+.about-content,
+.contact-content,
+.projects-container,
+.skills-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.contact-form{
+    width:90%;
+    margin:auto;
+}
+
+.project-card,
+.skill-card{
+    width:90%;
+    margin:auto;
+}
+
+}
