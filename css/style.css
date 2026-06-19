@@ -1121,3 +1121,19 @@ html{
 .navbar{
     position:relative;
 }
+
+
+
+
+
+
+.menu-toggle{
+    display:block !important;
+    position:fixed !important;
+    top:20px !important;
+    right:20px !important;
+    color:red !important;
+    font-size:40px !important;
+    z-index:999999 !important;
+    background:yellow !important;
+}
