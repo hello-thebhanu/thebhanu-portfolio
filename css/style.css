@@ -1124,4 +1124,23 @@ html{
         max-width:320px !important;
     }
 
+    .contact-card{
+    width:280px !important;
+    height:280px !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:center !important;
+    align-items:center !important;
+
+    margin:20px auto !important;
+}
+
+.contact-card h3{
+    min-height:50px;
+}
+
+.contact-card p{
+    min-height:60px;
+}
 }
