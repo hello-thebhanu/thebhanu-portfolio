@@ -187,3 +187,64 @@ document.addEventListener("mousemove",(e)=>{
     glow.style.top=e.clientY+"px";
 
 });
+
+/* =========================
+   STATS COUNTER
+========================= */
+
+const counters =
+document.querySelectorAll(".counter");
+
+const statsSection =
+document.querySelector(".stats");
+
+let started = false;
+
+window.addEventListener("scroll",()=>{
+
+if(started) return;
+
+const top =
+statsSection.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 100){
+
+started = true;
+
+counters.forEach(counter=>{
+
+const target =
++counter.getAttribute("data-target");
+
+let count = 0;
+
+const updateCounter = ()=>{
+
+const increment =
+target / 50;
+
+if(count < target){
+
+count += increment;
+
+counter.innerText =
+Math.ceil(count) + "+";
+
+requestAnimationFrame(updateCounter);
+
+}else{
+
+counter.innerText =
+target + "+";
+
+}
+
+};
+
+updateCounter();
+
+});
+
+}
+
+});
