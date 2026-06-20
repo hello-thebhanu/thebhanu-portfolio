@@ -1227,6 +1227,18 @@ transition:opacity .8s ease;
 font-family:'Inter',sans-serif;
 }
 
+#loader.flash{
+background:
+radial-gradient(
+circle,
+rgba(255,123,0,1) 0%,
+rgba(255,123,0,.7) 40%,
+#050505 100%
+);
+
+transition:.25s;
+}
+
 #loader.fade-out{
 opacity:0;
 pointer-events:none;
@@ -1280,6 +1292,13 @@ rotateCW 8s linear infinite;
 width:140px;
 height:140px;
 
+border-top:2px solid #ff7b00;
+border-right:2px solid transparent;
+border-bottom:2px solid #ff7b00;
+border-left:2px solid transparent;
+
+border-radius:50%;
+
 animation:
 ringExpand 1s .35s forwards,
 rotateCCW 12s linear infinite;
@@ -1316,7 +1335,6 @@ position:relative;
 }
 
 .loader-roles span{
-position:absolute;
 left:50%;
 transform:translateX(-50%);
 white-space:nowrap;
@@ -1448,3 +1466,67 @@ transform:scale(1.6);
 }
 
 }
+
+.energy-wave{
+position:absolute;
+width:20px;
+height:20px;
+border-radius:50%;
+border:2px solid rgba(255,123,0,.7);
+
+animation:
+energyPulse 2s infinite;
+}
+
+@keyframes energyPulse{
+
+0%{
+transform:scale(.2);
+opacity:1;
+}
+
+100%{
+transform:scale(12);
+opacity:0;
+}
+
+}
+
+.system-status{
+margin-top:15px;
+font-size:.8rem;
+letter-spacing:3px;
+color:#ff7b00;
+opacity:.8;
+}
+
+.system-status{
+animation:blinkStatus 1s infinite;
+}
+
+@keyframes blinkStatus{
+
+0%,100%{
+opacity:.3;
+}
+
+50%{
+opacity:1;
+}
+
+}
+
+.loader-name::after{
+content:"|";
+animation:cursorBlink .8s infinite;
+}
+
+@keyframes cursorBlink{
+
+50%{
+opacity:0;
+}
+
+}
+
+

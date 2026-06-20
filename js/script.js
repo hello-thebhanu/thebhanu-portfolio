@@ -81,10 +81,71 @@ const navLinks = document.querySelector(".nav-links");
 menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
-window.addEventListener("load",()=>{
 
 const loader =
 document.getElementById("loader");
+
+const text = "THE BHANU";
+const target = document.getElementById("loaderText");
+
+let i = 0;
+
+const roles = [
+"Creative Developer",
+"AI Enthusiast",
+"ECE Engineer",
+"Web Designer"
+];
+
+let roleIndex = 0;
+
+const roleElement =
+document.getElementById("changingRole");
+
+setInterval(()=>{
+
+roleIndex++;
+
+if(roleIndex >= roles.length){
+roleIndex = 0;
+}
+
+roleElement.textContent =
+roles[roleIndex];
+
+},1200);
+
+function typeLoaderName() {
+
+    if(i < text.length){
+
+        target.innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typeLoaderName,120);
+
+    }
+
+}
+
+setTimeout(()=>{
+
+
+},2100);
+
+setTimeout(()=>{
+
+loader.classList.add("fade-out");
+
+},4200);
+
+setTimeout(typeLoaderName,1200);
+
+
+window.addEventListener("load",()=>{
+
+
 
 setTimeout(()=>{
 
