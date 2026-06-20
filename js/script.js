@@ -81,3 +81,40 @@ const navLinks = document.querySelector(".nav-links");
 menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
+
+window.addEventListener("load",()=>{
+
+    setTimeout(()=>{
+
+        document.getElementById("loader").style.display="none";
+
+    },2000);
+
+});
+
+const reveals=document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll",()=>{
+
+    reveals.forEach((item)=>{
+
+        const top=item.getBoundingClientRect().top;
+
+        if(top<window.innerHeight-100){
+
+            item.classList.add("active");
+
+        }
+
+    });
+
+});
+
+const glow=document.querySelector(".cursor-glow");
+
+document.addEventListener("mousemove",(e)=>{
+
+    glow.style.left=e.clientX+"px";
+    glow.style.top=e.clientY+"px";
+
+});
