@@ -81,14 +81,22 @@ const navLinks = document.querySelector(".nav-links");
 menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
-
 window.addEventListener("load",()=>{
 
-    setTimeout(()=>{
+const loader =
+document.getElementById("loader");
 
-        document.getElementById("loader").style.display="none";
+setTimeout(()=>{
 
-    },2000);
+loader.classList.add("fade-out");
+
+setTimeout(()=>{
+
+loader.remove();
+
+},800);
+
+},2300);
 
 });
 

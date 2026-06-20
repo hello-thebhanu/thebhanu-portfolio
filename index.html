@@ -7,6 +7,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <title>THE BHANU | Portfolio</title>
 
 <meta name="description" content="Bhanu Prakash - ECE Student, Frontend Developer and AI Enthusiast. Explore my projects, skills, portfolio and contact information.">
@@ -43,8 +45,34 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <body>
 
     <div id="loader">
-    <h1>THE BHANU</h1>
+
+    <div class="hud">
+
+        <div class="center-dot"></div>
+
+        <div class="ring ring1"></div>
+        <div class="ring ring2"></div>
+        <div class="ring ring3"></div>
+
+    </div>
+
+    <h1 class="loader-name">THE BHANU</h1>
+
+    <div class="loader-roles">
+
+        <span>Creative Developer</span>
+        <span>AI Enthusiast</span>
+        <span>ECE Engineer</span>
+        <span>Web Designer</span>
+
+    </div>
+
+    <p class="loader-tagline">
+        Crafting Digital Experiences
+    </p>
+
 </div>
+
 
 <nav class="navbar">
 <div class="logo">
@@ -323,6 +351,31 @@ Designed & Developed By THE BHANU
 <script src="js/script.js"></script>
 
   </div>
+
+
+
+  <script>
+
+window.addEventListener("load",()=>{
+
+const loader =
+document.getElementById("loader");
+
+setTimeout(()=>{
+
+loader.classList.add("fade-out");
+
+setTimeout(()=>{
+
+loader.remove();
+
+},800);
+
+},2300);
+
+});
+
+</script>
 
 
 </body>
