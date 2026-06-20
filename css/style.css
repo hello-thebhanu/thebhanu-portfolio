@@ -1045,45 +1045,83 @@ html{
 
 @media (max-width:768px){
 
-.mobile-avatar{
-    display:flex;
-    justify-content:center;
-    margin:20px 0;
-}
+    .right{
+        display:none !important;
+    }
 
-.mobile-avatar img{
-    width:85%;
-    max-width:420px;
-    border-radius:20px;
-}
+    .mobile-avatar{
+        display:flex !important;
+        justify-content:center !important;
+        align-items:center !important;
+        width:100% !important;
+        margin:25px 0 !important;
+    }
 
-.right{
-    display:none;
-}
+    .mobile-avatar img{
+        width:100% !important;
+        max-width:500px !important;
+        border-radius:25px !important;
+        display:block !important;
+    }
 
-.mobile-avatar{
-    display:flex;
-    justify-content:center;
-    margin:20px 0;
-}
+    .left{
+        width:100% !important;
+        max-width:100% !important;
 
-.mobile-avatar img{
-    width:95%;
-    max-width:420px;
-    border-radius:25px;
-}
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        justify-content:center !important;
 
-.left{
-    text-align:center;
-}
+        text-align:center !important;
 
-.left p{
-    text-align:center;
-}
+        padding:0 20px !important;
+        box-sizing:border-box !important;
+    }
 
-#typing-text{
-    text-align:center;
-    margin-bottom:20px;
-}
+    .left h3{
+        width:100% !important;
+        text-align:center !important;
+    }
+
+    .left h1{
+        width:100% !important;
+        text-align:center !important;
+        font-size:4rem !important;
+        line-height:1.1 !important;
+        margin-bottom:10px !important;
+    }
+
+    #typing-text{
+        width:100% !important;
+        text-align:center !important;
+        font-size:1.8rem !important;
+        margin:15px 0 !important;
+        min-height:50px !important;
+    }
+
+    .left p{
+        width:100% !important;
+        max-width:90% !important;
+        text-align:center !important;
+        margin:0 auto !important;
+        line-height:1.8 !important;
+    }
+
+    .buttons{
+        width:100% !important;
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        justify-content:center !important;
+        gap:15px !important;
+        margin-top:25px !important;
+    }
+
+    .buttons a,
+    .buttons button{
+        width:90% !important;
+        max-width:320px !important;
+    }
 
 }
