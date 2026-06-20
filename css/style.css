@@ -1065,4 +1065,29 @@ html{
     display:none;
 }
 
+.mobile-avatar{
+    display:flex;
+    justify-content:center;
+    margin:20px 0;
+}
+
+.mobile-avatar img{
+    width:95%;
+    max-width:420px;
+    border-radius:25px;
+}
+
+.left{
+    text-align:center;
+}
+
+.left p{
+    text-align:center;
+}
+
+#typing-text{
+    text-align:center;
+    margin-bottom:20px;
+}
+
 }
