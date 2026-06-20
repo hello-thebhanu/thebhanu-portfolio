@@ -1165,6 +1165,55 @@ html{
     text-align: center;
 }
 
+@media (max-width:768px){
 
+.hero-content{
+    flex-direction:column !important;
+    text-align:center !important;
+}
+
+.hero-image{
+    width:100% !important;
+    display:flex !important;
+    justify-content:center !important;
+}
+
+.hero-image img{
+    width:85% !important;
+    max-width:320px !important;
+}
+
+.hero-buttons{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+}
+
+.hero-buttons .btn,
+.hero-buttons a{
+    width:90% !important;
+    max-width:320px !important;
+}
+
+.about-content,
+.skills-container,
+.projects-container,
+.education-container,
+.contact-container{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+}
+
+.project-card,
+.skill-card,
+.education-card,
+.contact-card{
+    width:90% !important;
+    max-width:350px !important;
+    margin:15px auto !important;
+}
+
+}
 
 
