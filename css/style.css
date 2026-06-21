@@ -140,6 +140,7 @@ button{
 .right{
     position:relative;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
 }
@@ -967,6 +968,9 @@ html{
         width:85%;
         max-width:420px;
         margin:10px auto;
+
+        animation:
+    heroGlow 8s ease-in-out infinite;
     }
 
 
@@ -1957,3 +1961,116 @@ object-fit:cover;
     z-index: 9999;
 }
 
+/* ===================================
+   HERO BREATHING GLOW
+=================================== */
+
+@keyframes heroGlow{
+
+    0%,100%{
+        box-shadow:
+        0 0 25px rgba(255,140,0,.35),
+        0 0 50px rgba(255,140,0,.15);
+    }
+
+    50%{
+        box-shadow:
+        0 0 45px rgba(255,140,0,.6),
+        0 0 90px rgba(255,140,0,.25);
+    }
+
+}
+
+
+/* =====================================
+   HERO SOCIAL ICONS
+===================================== */
+
+.hero-socials{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+
+    margin-top:50px;
+}
+
+.social-icon{
+    width:50px;
+    height:50px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:#fff;
+    font-size:20px;
+
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,140,0,0.25);
+
+    backdrop-filter:blur(12px);
+
+    transition:all .35s ease;
+
+    animation:iconFloat 5s ease-in-out infinite;
+}
+
+.social-icon:nth-child(2){
+    animation-delay:.5s;
+}
+
+.social-icon:nth-child(3){
+    animation-delay:1s;
+}
+
+.social-icon:nth-child(4){
+    animation-delay:1.5s;
+}
+
+.social-icon:hover{
+
+    color:#ff8c00;
+
+    transform:
+    translateY(-6px)
+    scale(1.1);
+
+    box-shadow:
+    0 0 15px rgba(255,140,0,.4),
+    0 0 30px rgba(255,140,0,.2);
+}
+
+@keyframes iconFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-4px);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero-socials{
+        gap:14px;
+    }
+
+    .social-icon{
+        width:45px;
+        height:45px;
+        font-size:18px;
+    }
+
+}
+.hero-socials-wrapper{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
