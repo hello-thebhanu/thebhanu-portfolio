@@ -40,6 +40,9 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+<link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
 </head>
 
 <body>
@@ -191,7 +194,7 @@ Contact Me
 </div>
 
 
-<section id="about" class="about reveal">
+<section id="about" class="about" data-aos="fade-up">
     <h2>About Me</h2>
 
    <p>
@@ -222,7 +225,7 @@ I'm Nagalappagari Bhanu Prakash, a Final Year Electronics and Communication Engi
 
 </section>
 
-<section id="skills" class="skills reveal">
+<section id="skills" class="skills" data-aos="flip-left">
 
 <h2>My Skills</h2>
 
@@ -282,7 +285,7 @@ I'm Nagalappagari Bhanu Prakash, a Final Year Electronics and Communication Engi
 
 </section>
 
-<section class="stats">
+<section class="stats" data-aos="fade-right">
 
     <h2 class="section-title">Milestones</h2>
 
@@ -312,7 +315,7 @@ I'm Nagalappagari Bhanu Prakash, a Final Year Electronics and Communication Engi
 
 </section>
 
-<section id="projects" class="projects reveal">
+<section id="projects" class="projects"data-aos="zoom-in-up">
 
 <h2>My Projects</h2>
 
@@ -387,7 +390,7 @@ I'm Nagalappagari Bhanu Prakash, a Final Year Electronics and Communication Engi
 
 </section>
 
-<section id="education" class="education reveal">
+<section id="education" class="education"data-aos="fade-left">
 
 <h2>Education</h2>
 
@@ -425,7 +428,7 @@ I'm Nagalappagari Bhanu Prakash, a Final Year Electronics and Communication Engi
 </div>
 
 
-<section id="internships" class="internships reveal">
+<section id="internships" class="internships" data-aos="fade-up">
 
     <h2 class="section-title">Virtual Internships</h2>
 
@@ -494,7 +497,7 @@ I'm Nagalappagari Bhanu Prakash, a Final Year Electronics and Communication Engi
 
 </section>
 
-<section id="contact" class="contact reveal">
+<section id="contact" class="contact" data-aos="fade-up">
 
 <h2>Contact Me</h2>
 
@@ -595,6 +598,15 @@ loader.remove();
 
 </script>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration:1000,
+    once:true,
+    offset:100
+});
+</script>
 
 </body>
 </html>
