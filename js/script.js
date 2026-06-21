@@ -62,6 +62,8 @@ document.getElementById("voice-btn");
 
 voiceBtn.addEventListener("click",()=>{
 
+
+    
     const videoModal =
     document.getElementById("video-modal");
 
@@ -85,14 +87,20 @@ document.getElementById("intro-video");
 
 if(introVideo){
 
-    introVideo.addEventListener("ended",()=>{
+  introVideo.addEventListener("ended",()=>{
+
+ 
+    setTimeout(()=>{
 
         document
         .getElementById("video-modal")
         .classList
         .remove("show");
 
+     
     });
+
+});
 
 }
 
