@@ -248,3 +248,17 @@ updateCounter();
 }
 
 });
+
+const progressBars = document.querySelectorAll(".progress-fill");
+
+const progressObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("active");
+        }
+    });
+});
+
+progressBars.forEach(bar => {
+    progressObserver.observe(bar);
+});
