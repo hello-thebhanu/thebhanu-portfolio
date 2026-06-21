@@ -62,18 +62,39 @@ document.getElementById("voice-btn");
 
 voiceBtn.addEventListener("click",()=>{
 
-const speech =
-new SpeechSynthesisUtterance(
+    const videoModal =
+    document.getElementById("video-modal");
 
-"Hello, I'm Bhanu Prakash. A Final Year Electronics and Communication Engineering student at Sree Venkateswara College of Engineering. I'm passionate about Web Design, Front End Development, and creating modern digital experiences. Welcome to my portfolio."
+    const introVideo =
+    document.getElementById("intro-video");
 
-);
+    if(videoModal && introVideo){
 
-speech.lang="en-US";
+        videoModal.classList.add("show");
 
-window.speechSynthesis.speak(speech);
+        introVideo.currentTime = 0;
+
+        introVideo.play();
+
+    }
 
 });
+
+const introVideo =
+document.getElementById("intro-video");
+
+if(introVideo){
+
+    introVideo.addEventListener("ended",()=>{
+
+        document
+        .getElementById("video-modal")
+        .classList
+        .remove("show");
+
+    });
+
+}
 
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelector(".nav-links");
@@ -262,3 +283,4 @@ const progressObserver = new IntersectionObserver(entries => {
 progressBars.forEach(bar => {
     progressObserver.observe(bar);
 });
+
