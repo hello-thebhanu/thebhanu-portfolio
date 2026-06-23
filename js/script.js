@@ -276,7 +276,7 @@ progressBars.forEach(bar => {
     progressObserver.observe(bar);
 });
 
-
+/*
 const themeToggle =
 document.getElementById("theme-toggle");
 
@@ -285,3 +285,139 @@ themeToggle.addEventListener("click",()=>{
 document.body.classList.toggle("light-mode");
 
 });
+*/
+
+const aiBtn = document.getElementById("bhanu-ai-btn");
+const aiPopup = document.getElementById("bhanu-ai-popup");
+
+aiBtn.addEventListener("click", () => {
+
+    if(aiPopup.style.display === "block"){
+        aiPopup.style.display = "none";
+    } else {
+        aiPopup.style.display = "block";
+    }
+
+});
+
+
+const aiButtons = document.querySelectorAll(".ai-suggestions button");
+const aiResponse = document.getElementById("ai-response");
+
+const answers = {
+
+"👨‍💻 Who is Bhanu?":
+"Bhanu Prakash Is An ECE Student, Frontend Developer and AI Enthusiast Passionate About Building Modern Websites and Smart AI Projects.",
+
+"⚡ Skills":
+"HTML, CSS, JavaScript, Responsive Design, AI Tools, GitHub, Frontend Development And UI/UX Design.",
+
+"🚀 Projects":
+"Portfolio Website, Student Reminder App, AI Assistant Integration And Multiple Academic Projects.",
+
+"🎓 Education":
+"B.Tech ECE Student At Sree Venkateswara Engineering College.",
+
+"📜 Certifications":
+"AICTE, EduSkills, Java Full Stack, Python Full Stack And Various Technology Certifications.",
+
+"📄 Resume":
+"You Can Download Bhanu's Resume From The Resume Section.",
+
+"📞 Contact":
+"Reach Bhanu Through The Contact Section Available On This Portfolio.",
+
+"💻 GitHub":
+"Explore Bhanu's Projects And Repositories Through GitHub."
+};
+
+aiButtons.forEach(button => {
+
+button.addEventListener("click", () => {
+
+const text = button.textContent.trim();
+
+aiResponse.innerHTML =
+answers[text] || "Information Coming Soon...";
+});
+
+});
+
+
+const input = document.getElementById("ai-question");
+const sendBtn = document.getElementById("send-btn");
+const response = document.getElementById("ai-response");
+
+input.addEventListener("keydown", function(event) {
+
+
+if(event.key === "Enter") {
+    event.preventDefault();
+    sendBtn.click();
+}
+
+
+});
+
+sendBtn.addEventListener("click", () => {
+
+
+const question = input.value.toLowerCase().trim();
+
+if(question === "") return;
+
+input.value = "";
+
+response.innerHTML = `
+🤖 Bhanu AI Is Thinking...
+<div class="typing-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+`;
+
+setTimeout(() => {
+
+    let answer = "";
+
+    if(question.includes("bhanu")) {
+
+        answer = "Bhanu Prakash Is An ECE Student, Frontend Developer and AI Enthusiast Passionate About Building Modern Websites and Smart AI Projects.";
+
+    } else if(question.includes("skill")) {
+
+        answer = "HTML, CSS, JavaScript, AI Tools, GitHub and Frontend Development.";
+
+    } else if(question.includes("project")) {
+
+        answer = "Portfolio Website, Student Reminder App And AI Assistant Integration.";
+
+    } else if(question.includes("education")) {
+
+        answer = "B.Tech ECE Student At Sree Venkateswara Engineering College.";
+
+    } else {
+
+        answer = "🐝 Bhanu AI Is Still Learning. Try Asking About Bhanu, Skills, Projects Or Education.";
+
+    }
+
+    response.innerHTML = `
+    <div class="user-msg">
+        🧑 <b>You:</b> ${question}
+    </div>
+
+    <br>
+
+    <div class="bot-msg">
+        🤖 <b>Bhanu AI:</b><br>
+        ${answer}
+    </div>
+    `;
+
+}, 800);
+
+
+});
+
